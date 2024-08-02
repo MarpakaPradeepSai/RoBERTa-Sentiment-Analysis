@@ -14,7 +14,7 @@ def roberta_analyze_sentiment(text):
     sentiment_mapping = {
         'LABEL_0': 'Negative',  # assuming LABEL_0 is negative
         'LABEL_1': 'Neutral',   # assuming LABEL_1 is neutral (if applicable)
-        'LABEL_2': 'Positive'   # assuming LABEL_2 is positive
+        'LABEL_2': 'Positive😊'   # assuming LABEL_2 is positive
     }
 
     sentiment = sentiment_mapping.get(sentiment_label, 'unknown')
