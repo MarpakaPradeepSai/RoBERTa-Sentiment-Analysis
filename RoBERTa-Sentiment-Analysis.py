@@ -65,8 +65,8 @@ def main():
     if st.button("Analyze"):
         if user_input:
             sentiment, confidence = roberta_analyze_sentiment(user_input)
-            st.write(f"**Sentiment:** {sentiment}")
-            st.write(f"**Confidence:** {confidence:.2f}")
+            st.write(f"**Sentiment :** {sentiment}")
+            st.write(f"**Confidence :** {confidence:.2f}")
         else:
             st.write("Please enter some text.")
 
