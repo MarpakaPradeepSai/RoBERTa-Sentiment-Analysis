@@ -12,8 +12,8 @@ def roberta_analyze_sentiment(text):
 
     # Map the model labels to more descriptive terms
     sentiment_mapping = {
-        'LABEL_0': 'Negative',  # assuming LABEL_0 is negative
-        'LABEL_1': 'Neutral',   # assuming LABEL_1 is neutral (if applicable)
+        'LABEL_0': 'Negative😡',  # assuming LABEL_0 is negative
+        'LABEL_1': 'Neutral😐',   # assuming LABEL_1 is neutral (if applicable)
         'LABEL_2': 'Positive😊'   # assuming LABEL_2 is positive
     }
 
