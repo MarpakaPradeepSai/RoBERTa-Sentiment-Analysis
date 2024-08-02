@@ -25,10 +25,19 @@ def main():
     st.title("Sentiment Analysis with RoBERTa")
     st.write("Enter a text below to analyze its sentiment.")
     
-    # Inject CSS for custom button styling
+    # Inject CSS for custom styling
     st.markdown(
         """
         <style>
+        .stTextArea textarea {
+            border: 1px solid #d3d3d3;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .stTextArea textarea:focus {
+            border: 1px solid blue;
+            outline: none;
+        }
         .stButton > button {
             background-color: green;
             color: white;
