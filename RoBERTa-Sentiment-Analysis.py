@@ -24,37 +24,31 @@ def roberta_analyze_sentiment(text):
 def main():
     st.title("Sentiment Analysis with RoBERTa")
     st.write("Enter a text below to analyze its sentiment.")
+    
+    # Inject CSS for custom button styling
+    st.markdown(
+        """
+        <style>
+        button[title="Analyze"] {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button[title="Analyze"]:hover {
+            background-color: darkgreen;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Text input
     user_input = st.text_area("Text")
 
-    # HTML for the styled button
-    button_html = """
-    <style>
-    .big-button {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    </style>
-    <a class="big-button" href="javascript:void(0);" onclick="document.getElementById('analyze-button').click()">Analyze</a>
-    """
-
-    # Display the styled button
-    st.markdown(button_html, unsafe_allow_html=True)
-    
-    # Hidden button to handle the click event
-    analyze_button = st.button("Analyze", key='analyze-button')
-
-    if analyze_button:
+    if st.button("Analyze"):
         if user_input:
             sentiment, confidence = roberta_analyze_sentiment(user_input)
             st.write(f"Sentiment: {sentiment}")
