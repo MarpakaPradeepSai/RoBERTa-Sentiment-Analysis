@@ -23,10 +23,8 @@ def roberta_analyze_sentiment(text):
 # Streamlit app
 def main():
     st.title("Sentiment Analysis with RoBERTa")
-    st.image("https://webcmstavtech.tav.aero/uploads/59f9875dc0e79a3594308ad3/static-pages/main-images/sentiment-analysis_1.jpg")
-    st.write("Enter a text below to analyze its sentiment.")
     
-    # Inject CSS for custom styling
+    # Custom styling for the instruction text
     st.markdown(
         """
         <style>
@@ -55,10 +53,16 @@ def main():
             background-color: darkgreen;
             color: white !important;
         }
+        .custom-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
         </style>
         """,
         unsafe_allow_html=True
     )
+
+    st.markdown('<p class="custom-text">Enter a text below to analyze its sentiment.</p>', unsafe_allow_html=True)
 
     # Text input
     user_input = st.text_area("Text")
@@ -66,8 +70,8 @@ def main():
     if st.button("Analyze"):
         if user_input:
             sentiment, confidence = roberta_analyze_sentiment(user_input)
-            st.write(f"**Sentiment :** {sentiment}")
-            st.write(f"**Confidence :** {confidence:.2f}")
+            st.markdown(f"**Sentiment:** {sentiment}")
+            st.markdown(f"**Confidence:** {confidence:.2f}")
         else:
             st.write("Please enter some text.")
 
