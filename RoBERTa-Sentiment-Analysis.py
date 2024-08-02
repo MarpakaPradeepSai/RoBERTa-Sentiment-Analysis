@@ -23,6 +23,7 @@ def roberta_analyze_sentiment(text):
 # Streamlit app
 def main():
     st.title("Sentiment Analysis with RoBERTa")
+    st.image("https://devopedia.org/images/article/105/6387.1532706595.png")
     st.write("Enter a text below to analyze its sentiment.")
     
     # Inject CSS for custom styling
