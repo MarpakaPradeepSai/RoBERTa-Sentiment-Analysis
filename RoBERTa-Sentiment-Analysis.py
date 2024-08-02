@@ -29,7 +29,7 @@ def main():
     st.markdown(
         """
         <style>
-        button[title="Analyze"] {
+        .stButton > button {
             background-color: green;
             color: white;
             border: none;
@@ -37,7 +37,7 @@ def main():
             font-size: 16px;
             border-radius: 5px;
         }
-        button[title="Analyze"]:hover {
+        .stButton > button:hover {
             background-color: darkgreen;
         }
         </style>
