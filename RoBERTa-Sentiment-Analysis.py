@@ -23,6 +23,7 @@ def roberta_analyze_sentiment(text):
 # Streamlit app
 def main():
     st.title("Sentiment Analysis with RoBERTa")
+    st.image("https://webcmstavtech.tav.aero/uploads/59f9875dc0e79a3594308ad3/static-pages/main-images/sentiment-analysis_1.jpg")
     
     # Custom styling for the instruction text
     st.markdown(
