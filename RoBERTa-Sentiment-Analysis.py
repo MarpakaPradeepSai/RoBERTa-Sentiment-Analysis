@@ -74,7 +74,7 @@ def main():
     # Text input
     user_input = st.text_area("Text")
 
-    if st.button("Analyze"):
+    if st.button("Analyze Sentiment"):
         if user_input:
             sentiment, confidence = roberta_analyze_sentiment(user_input)
             st.markdown(f"**Sentiment:** {sentiment}")
