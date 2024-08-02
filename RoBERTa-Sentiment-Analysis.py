@@ -23,12 +23,16 @@ def roberta_analyze_sentiment(text):
 # Streamlit app
 def main():
     st.title("Sentiment Analysis with RoBERTa")
-    st.image("https://webcmstavtech.tav.aero/uploads/59f9875dc0e79a3594308ad3/static-pages/main-images/sentiment-analysis_1.jpg", width = 400)
     
-    # Custom styling for the instruction text
+    # Custom styling for the instruction text and centering the image
     st.markdown(
         """
         <style>
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .stTextArea textarea {
             border: 1px solid #d3d3d3;
             padding: 10px;
@@ -63,6 +67,7 @@ def main():
         unsafe_allow_html=True
     )
 
+    st.markdown('<img src="https://webcmstavtech.tav.aero/uploads/59f9875dc0e79a3594308ad3/static-pages/main-images/sentiment-analysis_1.jpg" width="400" class="centered-image">', unsafe_allow_html=True)
     st.markdown('<p class="custom-text">Enter a text below to analyze its sentiment.</p>', unsafe_allow_html=True)
 
     # Text input
