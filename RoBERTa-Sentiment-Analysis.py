@@ -40,15 +40,19 @@ def main():
         }
         .stButton > button {
             background-color: green;
-            color: white;
+            color: white !important;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             border-radius: 5px;
         }
+        .stButton > button:focus {
+            background-color: green;
+            color: white !important;
+        }
         .stButton > button:hover {
             background-color: darkgreen;
-            color: white;
+            color: white !important;
         }
         </style>
         """,
