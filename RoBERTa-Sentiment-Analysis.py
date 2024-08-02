@@ -68,6 +68,7 @@ def main():
     )
 
     st.markdown('<img src="https://webcmstavtech.tav.aero/uploads/59f9875dc0e79a3594308ad3/static-pages/main-images/sentiment-analysis_1.jpg" width="400" class="centered-image">', unsafe_allow_html=True)
+    st.write("")
     st.markdown('<p class="custom-text">Enter a text below to analyze its sentiment.</p>', unsafe_allow_html=True)
 
     # Text input
