@@ -39,6 +39,7 @@ def main():
         }
         .stButton > button:hover {
             background-color: darkgreen;
+            color: white;
         }
         </style>
         """,
